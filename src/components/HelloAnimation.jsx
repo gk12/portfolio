@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 import { LiaPrayingHandsSolid } from "react-icons/lia";
 import { PiHandWaving } from "react-icons/pi";
+
 const HelloAnimation = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [greetingIndex, setGreetingIndex] = useState(0);
-  const greetings = ["Hello", "नमस्ते"]; 
+  // const greetings = ["Hello", "नमस्ते"];
+  const greetings = ["Hello"];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -19,18 +21,23 @@ const HelloAnimation = () => {
   });
 
   const isHello = greetings[greetingIndex] === "Hello";
+
   return (
     <div
-      className={`transition-opacity duration-1000 ease-in-out ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`transition-transform duration-1000 ease-in-out ${
+        isVisible
+          ? "opacity-100 transform scale-110"
+          : "opacity-0 transform scale-90"
+      } bounce-animation`}
     >
       <div className="flex justify-center gap-3 font-kalam">
-        <h3 className="text-4xl lg:text-6xl ">{greetings[greetingIndex]}</h3>
-        <span className="text-3xl lg:text-5xl">{isHello ? <PiHandWaving /> : <LiaPrayingHandsSolid />}</span>
+        <h3 className="text-4xl lg:text-6xl">{greetings[greetingIndex]}</h3>
+        <span className="text-3xl lg:text-5xl">
+          {isHello ? <PiHandWaving /> : <LiaPrayingHandsSolid />}
+        </span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HelloAnimation
+export default HelloAnimation;

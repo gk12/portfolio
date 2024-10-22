@@ -37,10 +37,12 @@ const About = () => {
           <h1 className="text-2xl lg:text-6xl  font-kalam">
             I'm <span ref={el}></span>
           </h1>
-          <p className="text-xl  text-gray-500">
-            Software Engineer. Self-taught Full Stack Developer | Passionate
-            about learning and innovation
+          <p className="text-xl text-gray-500">
+            Software Engineer and Self-Taught Full Stack Developer | Passionate
+            about creating simple, effective solutions and always eager to
+            learn.
           </p>
+
           <div className="flex gap-6 ">
             <div>
               <a
