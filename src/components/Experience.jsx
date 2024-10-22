@@ -1,12 +1,10 @@
-import React from "react";
-
 const Experience = () => {
   const workExperience = [
     {
       id: 1,
       title: "Software Engineer",
       company: "Boffin Blocks",
-      location: "Chandigarh",
+      location: "Remote",
       date: "July 2023 - Present",
       responsibilities: [
         `Collaborated closely with cross-functional teams to rigorously test,

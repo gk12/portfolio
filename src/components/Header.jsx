@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
@@ -84,6 +84,18 @@ const Header = () => {
                 Experience
               </Link>
             </li>
+            <li className="hover:text-orange-400 decoration-4">
+              <Link
+                to="Volunteering"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                activeClassName="active"
+              >
+                Volunteering
+              </Link>
+            </li>
 
             <li className="hover:text-orange-400 decoration-4">
               <Link
@@ -95,6 +107,18 @@ const Header = () => {
                 activeClassName="active"
               >
                 My Projects
+              </Link>
+            </li>
+            <li className="hover:text-orange-400 decoration-4">
+              <Link
+                to="Achievements"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                activeClassName="active"
+              >
+                Achievements
               </Link>
             </li>
             <li className="hover:text-orange-400 decoration-4">

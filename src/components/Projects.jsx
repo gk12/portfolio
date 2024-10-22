@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectsCard from "./ProjectsCard";
 
 const Projects = () => {
@@ -61,14 +60,14 @@ const Projects = () => {
     ],
   };
   return (
-    <div className="flex flex-col  w-full h-auto  bg-[#98E3E2]" id="Projects">
+    <div className="flex flex-col  w-full h-auto  bg-[#B4F2F1]" id="Projects">
       <div className="ml-[10.5rem] pt-12">
         <h1 className=" text-2xl font-bold ">MY PROJECTS</h1>
         <h2 className=" text-lg ">
           Each project is a unique piece of development
         </h2>
       </div>
-      <div className="w-[80%] ml-[10.5rem] flex flex-col justify-center items-center text-center py-10 gap-20 rounded bg-[#98E3E2] mb-20">
+      <div className="w-[80%] ml-[10.5rem] flex flex-col justify-center items-center text-center py-10 gap-20 rounded bg-[#B4F2F1] mb-20">
         {portfolioData.portfolioCards.map((card) => (
           <ProjectsCard key={card.id} cardData={card} />
         ))}

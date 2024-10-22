@@ -1,5 +1,4 @@
-import React from "react";
-import { FaLinkedin, FaGithub, FaHeart } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 const Footer = () => {
   return (

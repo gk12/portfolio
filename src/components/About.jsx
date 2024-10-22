@@ -9,7 +9,7 @@ const About = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Gaurav Kumar.", "a Full Stack Developer."],
+      strings: ["Gaurav Kumar.", "a Full Stack Developer"],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 120,
@@ -286,7 +286,7 @@ const About = () => {
           <img
             src="https://res.cloudinary.com/gk35044/image/upload/v1721730188/gaurav_portfolio/wk9pbr362djsehhd6puy.jpg"
             alt="avatar_Image"
-            className=" rounded-[100%] h-full w-full shadow-2xl "
+            className=" rounded-[15%] h-full w-full shadow-2xl "
           />
         </div>
       </div>
