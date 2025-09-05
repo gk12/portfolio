@@ -95,11 +95,11 @@ const Skills = () => {
   ];
   return (
     <div
-      className="bg-[#98E3E2] flex justify-between items-center w-full h-auto lg:h-[90vh]"
+      className="bg-[#98E3E2] flex justify-between items-center w-full h-auto lg:h-[90vh] pt-4 sm:pt-8 lg:pt-20"
       id="Skills"
     >
-      <div className="container ml-[10.5rem] py-10">
-        <h1 className=" pt-12  md:text-2xl text-xl font-semibold ">
+      <div className="container mx-4 sm:mx-6 lg:mx-8 xl:mx-44 py-4 sm:py-6 lg:py-10 max-w-7xl">
+        <h1 className="pt-4 sm:pt-6 lg:pt-12 md:text-2xl text-xl font-semibold">
           {" "}
           My Skill Set.
         </h1>
@@ -110,18 +110,18 @@ const Skills = () => {
           {items.map((item) => (
             <div className="mb-10" key={item.title}>
               <p className="mb-2">{item.title}</p>
-              <div className="flex flex-wrap  items-center gap-6 ">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6">
                 {item.content.map((subItem) => (
                   <div
                     key={subItem.title}
-                    className="flex bg-primary items-center gap-4 px-4 py-3 rounded-md md:w-48 md:h-16 w-36 h-14 bg-[#54c9c7]"
+                    className="flex bg-primary items-center gap-2 sm:gap-3 lg:gap-4 px-2 sm:px-3 lg:px-4 py-2 sm:py-3 rounded-md w-auto min-w-[120px] sm:min-w-[140px] lg:min-w-[180px] h-12 sm:h-14 lg:h-16 bg-[#54c9c7] hover:bg-[#4ab5b3] transition-colors duration-200"
                   >
                     <img
                       src={subItem.image}
-                      className="nd:w-11 w-9"
+                      className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 flex-shrink-0"
                       alt={subItem.title}
                     />
-                    <p className="md:text-base text-sm">{subItem.title}</p>
+                    <p className="text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap">{subItem.title}</p>
                   </div>
                 ))}
               </div>

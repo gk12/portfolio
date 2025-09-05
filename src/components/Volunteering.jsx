@@ -13,23 +13,23 @@ const Volunteering = () => {
   ];
   return (
     <div
-      className="bg-[#98E3E2] flex justify-between items-center w-full h-auto lg:h-[90vh]"
+      className="bg-[#98E3E2] flex justify-between items-center w-full h-auto lg:h-[90vh] pt-4 sm:pt-8 lg:pt-20"
       id="Volunteering"
     >
-      <div className="container ml-[10.5rem] py-10">
-        <h1 className=" pt-12  md:text-2xl text-xl font-semibold ">
+      <div className="container mx-4 sm:mx-6 lg:mx-8 xl:mx-44 py-4 sm:py-6 lg:py-10 max-w-7xl">
+        <h1 className="pt-4 sm:pt-6 lg:pt-12 md:text-2xl text-xl font-semibold">
           {" "}
           VOLUNTEERING.
         </h1>
         <p className="pt-3 md:text-xl text-lg text-text">
           A Snapshot of What I Bring.
         </p>
-        <div className=" pt-12">
-          {items.map((item) => (
-            <div className="mb-10" key={item.title}>
-              <p className="mb-2 font-semibold">{item.title}</p>
-              <div className="flex bg-primary items-center  px-4  rounded-md  max-h-[20rem]  max-w-[50rem] w-[45rem] h-[15rem] bg-[#54c9c7]">
-                <p className="md:text-base text-sm">{item.content}</p>
+        <div className="pt-12">
+          {items.map((item, index) => (
+            <div className="mb-10" key={index}>
+              <p className="mb-2 font-semibold text-sm sm:text-base lg:text-lg">{item.title}</p>
+              <div className="flex bg-primary items-center px-4 rounded-md max-h-[20rem] max-w-full w-full h-auto min-h-[12rem] bg-[#54c9c7] hover:bg-[#4ab5b3] transition-colors duration-200">
+                <p className="text-sm sm:text-base">{item.content}</p>
               </div>
             </div>
           ))}

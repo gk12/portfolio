@@ -34,38 +34,45 @@ const Experience = () => {
     },
   ];
   return (
-    <div className="bg-[#B4F2F1] min-h-screen text-black " id="Experience">
-      <div className="container ml-[10.5rem] ">
-        <h1 className=" pt-12  md:text-2xl text-xl font-semibold ">
+    <div className="bg-[#B4F2F1] min-h-screen text-black pt-4 sm:pt-8 lg:pt-20" id="Experience">
+      <div className="container mx-4 sm:mx-6 lg:mx-8 xl:mx-44 max-w-7xl py-6 sm:py-8 lg:py-12">
+        <h1 className="pt-2 sm:pt-4 lg:pt-6 md:text-2xl text-xl font-semibold">
           Professional Journey.
         </h1>
-        <p className="pt-3 md:text-xl text-lg text-text">
+        <p className="pt-2 sm:pt-3 md:text-xl text-lg text-text">
           Where I've Made an Impact.
         </p>
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-5xl">
           {workExperience.map((item) => (
-            <div key={item.id} className="flex  mt-10">
-              <div className="flex-1 md:flex [display:none]  items-center gap-2">
-                {/* <Calendar /> */}
-                {item.date}
-              </div>
-              <div className="border md:mr-28 mr-16 stepper" />
-              <div className="flex-1">
-                <h1 className="md:text-3xl text-2xl font-medium">
-                  {item.title}{" "}
-                </h1>
-                <p className="md:text-xl text-lg md:mb-2">
-                  {item.company} | {item.location}
-                </p>
-                <div className="flex-1 md:[display:none] flex items-center gap-2 mb-2">
-                  {/* <Calendar /> */}
-                  {item.date}
+            <div key={item.id} className="mt-8 sm:mt-10">
+              <div className="flex flex-col lg:flex-row lg:gap-8">
+                {/* Date section - hidden on mobile, shown on desktop */}
+                <div className="hidden lg:flex lg:flex-col lg:items-start lg:w-48 lg:flex-shrink-0">
+                  <span className="text-sm font-medium text-gray-600">{item.date}</span>
                 </div>
-                <ul className="list-disc">
-                  {item.responsibilities.map((summery) => (
-                    <li className="mb-2 md:text-lg text-sm">{summery}</li>
-                  ))}
-                </ul>
+                
+                {/* Content section */}
+                <div className="flex-1 min-w-0">
+                  <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-2">
+                    {item.title}
+                  </h1>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-2 text-gray-700">
+                    {item.company} | {item.location}
+                  </p>
+                  
+                  {/* Date section - shown on mobile, hidden on desktop */}
+                  <div className="lg:hidden mb-3">
+                    <span className="text-sm font-medium text-gray-600">{item.date}</span>
+                  </div>
+                  
+                  <ul className="list-disc pl-4 space-y-2">
+                    {item.responsibilities.map((summery, index) => (
+                      <li key={index} className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700">
+                        {summery}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}

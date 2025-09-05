@@ -26,37 +26,37 @@ const About = () => {
   }, []);
   return (
     <div
-      className="flex justify-between items-center w-full h-auto lg:h-[90vh]  bg-[#B4F2F1] "
+      className="flex justify-between items-center w-full h-auto lg:h-[90vh] bg-[#B4F2F1] pt-16 sm:pt-18 lg:pt-20"
       id="home"
     >
-      <div className="flex flex-col-reverse gap-4 lg:gap-0 lg:flex-row justify-between items-center  mx-4 mt-4 lg:mx-44 w-[90%] lg:w-full ">
+      <div className="flex flex-col-reverse gap-4 lg:gap-0 lg:flex-row justify-between items-center mx-4 sm:mx-6 lg:mx-8 xl:mx-44 w-[90%] lg:w-full max-w-7xl">
         <div className="flex flex-col justify-between gap-5 items-center lg:items-start font-semibold ">
           <h1 className=" font-kalam">
             <HelloAnimation />
           </h1>
-          <h1 className="text-2xl lg:text-6xl  font-kalam">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-kalam">
             I'm <span ref={el}></span>
           </h1>
-          <p className="text-xl text-gray-500">
+          <p className="text-base sm:text-lg md:text-xl text-gray-500 text-center lg:text-left max-w-2xl">
             Software Engineer and Self-Taught Full Stack Developer | Passionate
             about creating simple, effective solutions and always eager to
             learn.
           </p>
 
-          <div className="flex gap-6 ">
+          <div className="flex gap-6 justify-center lg:justify-start">
             <div>
               <a
                 href="https://drive.google.com/file/d/1dULEqxDcEHi5kZR8OHi8NdBMTabTOLUC/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="rounded-lg bg-orange-500 text-white font-semibold h-10 w-28 text-center items-center ">
+                <button className="rounded-lg bg-orange-500 text-white font-semibold h-10 w-28 text-center items-center hover:bg-orange-600 transition-colors">
                   Download CV
                 </button>
               </a>
             </div>
           </div>
-          <div className="flex text-center justify-center gap-2 cursor-pointer text-4xl">
+          <div className="flex text-center justify-center gap-2 cursor-pointer text-2xl sm:text-3xl lg:text-4xl">
             <a
               href="https://www.linkedin.com/in/gauravkumar44/"
               target="_blank"
@@ -284,11 +284,11 @@ const About = () => {
             </a>
           </div>
         </div>
-        <div className="h-[30%] w-[30%] text-center  ">
+        <div className="h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] lg:h-[300px] lg:w-[300px] xl:h-[350px] xl:w-[350px] text-center flex-shrink-0">
           <img
             src="https://res.cloudinary.com/gk35044/image/upload/v1721730188/gaurav_portfolio/wk9pbr362djsehhd6puy.jpg"
             alt="avatar_Image"
-            className=" rounded-[15%] h-full w-full shadow-2xl "
+            className="rounded-[15%] h-full w-full shadow-2xl object-cover"
           />
         </div>
       </div>

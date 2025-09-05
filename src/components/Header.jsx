@@ -20,8 +20,8 @@ const Header = () => {
     });
   };
   return (
-    <div className="flex justify-center items-center w-full h-20 drop-shadow-lg shadow-xl font-semibold text-lg rounded sticky top-0 left-0 z-10 bg-white">
-      <div className="flex justify-between items-end lg:items-center mx-6 lg:mx-24 w-full">
+    <div className="flex justify-center items-center w-full h-20 drop-shadow-lg shadow-xl font-semibold text-lg rounded sticky top-0 left-0 z-50 bg-white">
+      <div className="flex justify-between items-end lg:items-center mx-4 sm:mx-6 lg:mx-24 w-full max-w-7xl">
         <NavLink>
           <div
             className="hover:text-orange-400 font-extrabold text-3xl font-caveat hover:cursor-pointer "
@@ -42,11 +42,11 @@ const Header = () => {
         <div
           className={`lg:flex items-center justify-center gap-1 lg:gap-12 list-none ${
             showMenu
-              ? "fixed font-jost flex flex-col right-0 top-[85px] bg-gray-400 bg-opacity-50 w-[90%] left-4 rounded-lg border-slate-400 border-2"
+              ? "fixed font-jost flex flex-col right-0 top-[85px] bg-gray-400 bg-opacity-90 w-[90%] left-4 rounded-lg border-slate-400 border-2 z-50 backdrop-blur-sm"
               : "hidden"
           }`}
         >
-          <ul className="lg:flex items-center justify-center gap-12 list-none hover:cursor-pointer">
+          <ul className="lg:flex items-center justify-center gap-6 sm:gap-8 lg:gap-12 list-none hover:cursor-pointer p-4 lg:p-0">
             <li className="hover:text-orange-400 decoration-4">
               <Link
                 to="home"

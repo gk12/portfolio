@@ -60,14 +60,14 @@ const Projects = () => {
     ],
   };
   return (
-    <div className="flex flex-col  w-full h-auto  bg-[#B4F2F1]" id="Projects">
-      <div className="ml-[10.5rem] pt-12">
-        <h1 className=" text-2xl font-bold ">MY PROJECTS</h1>
-        <h2 className=" text-lg ">
+    <div className="flex flex-col w-full h-auto bg-[#B4F2F1] pt-4 sm:pt-8 lg:pt-20" id="Projects">
+      <div className="mx-4 sm:mx-6 lg:mx-8 xl:mx-44 pt-4 sm:pt-6 lg:pt-12 max-w-7xl">
+        <h1 className="text-xl sm:text-2xl font-bold">MY PROJECTS</h1>
+        <h2 className="text-base sm:text-lg">
           Each project is a unique piece of development
         </h2>
       </div>
-      <div className="w-[80%] ml-[10.5rem] flex flex-col justify-center items-center text-center py-10 gap-20 rounded bg-[#B4F2F1] mb-20">
+      <div className="w-[90%] sm:w-[85%] lg:w-[80%] mx-auto flex flex-col justify-center items-center text-center py-10 gap-10 sm:gap-16 lg:gap-20 rounded bg-[#B4F2F1] mb-20">
         {portfolioData.portfolioCards.map((card) => (
           <ProjectsCard key={card.id} cardData={card} />
         ))}

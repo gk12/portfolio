@@ -8,7 +8,7 @@ import Achievement from "./Achievement";
 import Volunteering from "./Volunteering";
 const Myportfolio = () => {
   return (
-    <div>
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Header />
       <About />
       <Skills />
