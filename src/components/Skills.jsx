@@ -18,6 +18,15 @@ const Skills = () => {
       title: "Front End",
       content: [
         {
+          title: "React Js",
+          image: reactjsImage,
+        },
+        {
+          title: "Next Js",
+          image:
+            "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+        },
+        {
           title: "HTML",
           image: htmlImage,
         },
@@ -25,14 +34,12 @@ const Skills = () => {
           title: "CSS",
           image: cssImage,
         },
-        {
-          title: "React.js",
-          image: reactjsImage,
-        },
+
         {
           title: "Tailwind Css",
           image: tailwindIcon,
         },
+
         // Add more front-end technologies
       ],
     },
@@ -40,11 +47,15 @@ const Skills = () => {
       title: "Back End",
       content: [
         {
-          title: "Node.js",
+          title: "Node Js",
           image: nodejsImage,
         },
         {
-          title: "Express.js",
+          title: "Nest Js",
+          image: "https://nestjs.com/img/logo_text.svg",
+        },
+        {
+          title: "Express Js",
           image: expressjsImage,
         },
         // Add more back-end technologies
@@ -54,12 +65,30 @@ const Skills = () => {
       title: "Database",
       content: [
         {
+          title: "MySQL",
+          image: mysqlImage,
+        },
+        {
           title: "MongoDB",
           image: mongoDbImage,
         },
         {
-          title: "MySQL",
-          image: mysqlImage,
+          title: "PostgreSQL",
+          image:
+            "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg",
+        },
+      ],
+    },
+    {
+      title: "AI",
+      content: [
+        {
+          title: "Langchain",
+          image: langchain,
+        },
+        {
+          title: "Chromadb",
+          image: "https://avatars.githubusercontent.com/u/112831612?s=200&v=4",
         },
       ],
     },
@@ -69,10 +98,6 @@ const Skills = () => {
         {
           title: "Git",
           image: gitImage,
-        },
-        {
-          title: "GitHub",
-          image: gitHubImage,
         },
         {
           title: "Socket",
@@ -87,15 +112,15 @@ const Skills = () => {
           image: awsImage,
         },
         {
-          title: "Langchain",
-          image: langchain,
+          title: "Elastic Search",
+          image: "https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg",
         },
       ],
     },
   ];
   return (
     <div
-      className="bg-[#98E3E2] flex justify-between items-center w-full h-auto lg:h-[90vh] pt-4 sm:pt-8 lg:pt-20"
+      className="bg-[#98E3E2] flex justify-between items-center w-full h-auto lg:h-[98vh] pt-4 sm:pt-8 lg:pt-20"
       id="Skills"
     >
       <div className="container mx-4 sm:mx-6 lg:mx-8 xl:mx-44 py-4 sm:py-6 lg:py-10 max-w-7xl">
@@ -106,7 +131,7 @@ const Skills = () => {
         <p className="pt-3 md:text-xl text-lg text-text">
           A Snapshot of What I Bring.
         </p>
-        <div className=" pt-12">
+        <div className=" pt-4">
           {items.map((item) => (
             <div className="mb-10" key={item.title}>
               <p className="mb-2">{item.title}</p>
@@ -121,7 +146,9 @@ const Skills = () => {
                       className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 flex-shrink-0"
                       alt={subItem.title}
                     />
-                    <p className="text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap">{subItem.title}</p>
+                    <p className="text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap">
+                      {subItem.title}
+                    </p>
                   </div>
                 ))}
               </div>
